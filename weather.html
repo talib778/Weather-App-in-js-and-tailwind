@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Talib's Weather app</title>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-[100vh] bg-[url('./images/purple_bg.jpg')] bg-no-repeat bg-cover">
+      <div class="bg-transparent rgba-(255,255,255,0.12) w-[450px] h-[555px] p-9" style="background-color: rgba(0, 0, 0, 0.3);">
+        <div class="w-[100%] h-[50px] relative flex items-center">
+        <i class="fa-solid fa-location-dot pl-3 fa-lg text-gray-400"></i>
+        <input type="text" class=" input absolute w-[100%] h-[100%] border-2 border-gray-500 pl-11 py-[3px] bg-transparent uppercase focus:outline-none placeholder-white text-[20px] text-white rounded-md"  placeholder="enter city here " >
+        <button class=" absolute right-0 pr-5 text-white" id="search_btn"><i class=" fa-solid fa-magnifying-glass fa-lg "></i></button>
+      </div>
+      <div class="flex-col items-center justify-center hidden " id="error_box">
+        <img src="./images/error2.jpeg" class="mt-14 mb-8">
+        <h1 class="text-white text-2xl font-semibold">Location not found!!<span class="ml-2 text-[19px] text-yellow-500">try again</span></h1>
+      </div>
+      <div class="flex flex-col items-center justify-center  " id="front_box">
+        <img src="./images/location.jpeg" class="mt-14 mb-8">
+        <h1 class="text-white text-2xl font-semibold">Please enter the city<span class="ml-2 text-[19px] text-yellow-500">for weather</span></h1>
+      </div>
+       <div id="weather_body" class="hidden flex-col items-center justify-center">
+          <img src="./images/sun cloud.png" class="w-64 pt-7" id="w_img">
+          <div class="flex items-center justify-center text-white text-[52px] pt-2 pb-2 font-semibold" id="temperature"><p>0</p>
+          <img src="./images/centigrade.png" class="w-10"></div>
+        <p class="text-white text-[20px]" id="t_description">partially cloudy</p>
+        <div class="flex justify-between ">
+            <div class="flex items-center text-white mt-12 mr-14">
+              <div><i class="fa-solid fa-water fa-xl pr-5" ></i></div>
+              <div class="text-[18px]" id="humidity"><p>0%</p>
+              <p>Humidity</p>
+            </div>
+            </div>
+            <div class="flex items-center text-white mt-12">
+              <div><i class="fa-solid fa-wind fa-xl pr-5" ></i></div>
+              <div class="text-[18px]" id="w_speed"><p>0%</p>
+              <p>Wind Speed</p>
+            </div>
+            </div>
+            </div>
+       </div>
+      </div>
+    </div>
+    <script src="weather.js"></script>
+  </body>
+</html>
+
+
+
+
+
